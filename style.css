@@ -24,8 +24,6 @@
 body {
     font-family: 'System-UI', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
-
 :root {
     --img-size: 100px;
     --gap: 10px;
@@ -76,7 +74,6 @@ span.left-rating::before {
     gap: var(--gap);
     transition: transform 0.4s ease-in-out;
 }
-
 .v-item {
     height: var(--img-size);
     width: var(--img-size);
@@ -88,7 +85,6 @@ span.left-rating::before {
     cursor: grab;
     user-select: none;
 }
-
 .h-track {
     display: flex;
     transition: transform 0.1s ease-out; 
@@ -126,7 +122,6 @@ span.left-rating::before {
     cursor: pointer;
     font-size: 19px;
 }
-
 .btn-nav:disabled {
     background-color: #ccc;
     cursor: not-allowed;
@@ -147,7 +142,6 @@ span.left-rating::before {
     --bs-gutter-x: 1.5rem; 
 }
 .row > * {
-    
     padding-right: calc(var(--bs-gutter-x) * .3) !important;
     padding-left: calc(var(--bs-gutter-x) * .3) !important;
 }
@@ -227,6 +221,89 @@ span.left-rating::before {
 .row .my-switch-button:hover{
     background-color: var(--my-green-dark);
     color: white;
+}
+.section-2{
+    background-color: #003D78;
+}
+.section-2 div h1{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 3.14rem;
+}
+.section-2 div p.text-light{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.hover-circle {
+  width: 65px;
+  height: 65px;
+  border: 0.04rem solid #fcfcfc; 
+  border-radius: 50%;        
+  overflow: hidden;          
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease; 
+  cursor: pointer;
+  background-color: #1F3A5F;
+  position: relative;
+  left: -17px;
+}
+.hover-circle img {
+  width: 93%;
+  height: 93%;
+  object-fit: cover;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+.section-2-right-head{
+    font-weight: 700;
+    font-size: 1.12rem;
+}
+.section-2-right-text{
+    color: #E5E7EB;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    line-height: 1.6rem;
+}
+.section-2-right-row:hover .hover-circle{
+    transform: scale(1.1);
+}
+.section-2-right-row:hover .section-2-right-text{
+    color: white;
+}
+.section-2-right-row:hover .hover-circle img{
+    width: 100%;
+    height: 100%;
+}
+.section-2-right-row:hover{
+    transform: translateX(0.5rem);
+}
+.section-2-right-row{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.section-2-left-image{
+    max-width: 500px;
+    position: relative;
+    z-index: 2; 
+    display: block;
+}
+.hexagon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hexagon-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); 
+    width: 104%;
+    height: 104%;
+    z-index: 1;
+    pointer-events: none;
 }
 /*ids*/
 #content-onetime .my-cards{
