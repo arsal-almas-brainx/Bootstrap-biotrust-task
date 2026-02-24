@@ -35,3 +35,55 @@ function switchContent(type) {
     const targetId = 'content-' + type;
     document.getElementById(targetId).classList.remove('d-none');
 }
+//image scrolling section 1 right footer
+(function() {
+    const hViewport = document.getElementById('viewport');
+    const hTrack = document.getElementById('h-track');
+
+    if (!hViewport || !hTrack) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    const items = [...hTrack.children];
+    const originalCount = items.length;
+    items.forEach(item => {
+        hTrack.appendChild(item.cloneNode(true));
+        hTrack.insertBefore(item.cloneNode(true), hTrack.firstChild);
+    });
+    const setInitialPos = () => {
+        const itemWidth = hTrack.children[0].offsetWidth;
+        hViewport.scrollLeft = itemWidth * originalCount;
+    };
+    window.addEventListener('load', setInitialPos);
+    window.addEventListener('resize', setInitialPos);
+    hViewport.addEventListener('mousedown', (e) => {
+        isDown = true;
+        hViewport.style.cursor = 'grabbing';
+        startX = e.pageX - hViewport.offsetLeft;
+        scrollLeft = hViewport.scrollLeft;
+    });
+    window.addEventListener('mouseup', () => {
+        isDown = false;
+        hViewport.style.cursor = 'grab';
+    });
+    hViewport.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - hViewport.offsetLeft;
+        const walk = (x - startX) * 1.5; // Drag speed multiplier
+        hViewport.scrollLeft = scrollLeft - walk;
+
+        handleLoop();
+    });
+    function handleLoop() {
+        const itemWidth = hTrack.children[0].offsetWidth;
+        const totalSetWidth = itemWidth * originalCount;
+        if (hViewport.scrollLeft >= totalSetWidth * 2) {
+            hViewport.scrollLeft -= totalSetWidth;
+        } 
+        else if (hViewport.scrollLeft <= 0) {
+            hViewport.scrollLeft += totalSetWidth;
+        }
+    }
+})();
