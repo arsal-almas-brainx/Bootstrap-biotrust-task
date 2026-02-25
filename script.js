@@ -87,3 +87,37 @@ function switchContent(type) {
         }
     }
 })();
+//zoom effect of section 1 + image select
+const mainImg = document.getElementById('main-product-img');
+const zoomBox = document.getElementById('zoom-box');
+const thumbnails = document.querySelectorAll('.v-item');
+
+if(thumbnails.length > 0) thumbnails[0].classList.add('active-thumb');
+
+thumbnails.forEach(thumb => {
+    thumb.addEventListener('click', function() {
+        
+        mainImg.src = this.src;
+
+        
+        thumbnails.forEach(t => t.classList.remove('active-thumb'));
+        this.classList.add('active-thumb');
+    });
+});
+
+// Zoom Follow Logic
+zoomBox.addEventListener('mousemove', (e) => {
+    const rect = zoomBox.getBoundingClientRect();
+    
+   
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    
+    
+    mainImg.style.transformOrigin = `${x}% ${y}%`;
+});
+
+
+zoomBox.addEventListener('mouseleave', () => {
+    mainImg.style.transformOrigin = 'center center';
+});

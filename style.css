@@ -1,10 +1,4 @@
-/*@font-face {
-    font-family: 'System-UI';
-    src: url('assets/ui/ui.ttf') format('truetype-variations');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}*/
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 @property --my-green {
   syntax: '<color>';
   inherits: true;
@@ -78,6 +72,17 @@ span.left-rating::before {
     height: var(--img-size);
     width: var(--img-size);
     object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.2s, border 0.2s;
+    border: 2px solid transparent; 
+    margin-bottom: 10px;
+}
+.v-item:hover {
+    opacity: 0.8; 
+}
+.v-item.active-thumb {
+    border-color: #007bff !important; 
+    opacity: 1;
 }
 .h-viewport {
     width: 100%;
@@ -305,6 +310,89 @@ span.left-rating::before {
     z-index: 1;
     pointer-events: none;
 }
+.zoom-box {
+    width: 100%;
+    overflow: hidden; 
+    cursor: zoom-in;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.zoom-box:hover #main-product-img {
+    transform: scale(2); 
+}
+.section-3{
+    background-color: #F2F3F6;
+}
+.section-3-head{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: rgb(0, 61, 120);
+    line-height: 2.4rem;
+}
+.my-custom-avatar {
+    width: 16rem;
+    height: 16rem;
+    border: 3px solid white;
+    border-radius: 4px;
+    outline: 2px solid #E6E7EB;
+    outline-offset: 0.55rem;
+    display: block;
+}
+.section-3-card{
+    max-width: 19.2rem;
+}
+.star-rating {
+  gap: 8px; 
+  font-size: 1rem;
+  color: #FACC14; 
+}
+.section-3 .section-3-card .card-text{
+    color: rgb(55, 65, 81);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.custom-check-badge {
+  width: 21px;
+  height: 21px;
+  background-color: #16A349; 
+  border-radius: 50%;
+}
+.custom-check-badge svg {
+  width: 60%; 
+  height: 60%;
+  color: white;
+}
+.custom-check-badge-text{
+    color: rgb(75, 85, 99);
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+}
+.section-3-card-footer{
+    background-color: #0E4F9A;
+    margin-left: -2rem;
+    margin-right: -2em;
+    margin-bottom: -1rem;
+}
+.section-3-card-footer-text{
+    color: rgb(255,255,255);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    padding-top: 2rem;
+}
+.section-3-card-button{
+    width: auto;
+    height: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 10px !important;
+}
+.section-3-card-button span{
+    color: rgb(13, 79, 154);
+    font-weight: 400;
+    font-size: 12px;
+}
 /*ids*/
 #content-onetime .my-cards{
     height: 17.5rem;
@@ -313,4 +401,10 @@ span.left-rating::before {
 #content-onetime .middle-card{
     height: 19rem;
     border: 0.17rem solid var(--my-blue);
+}
+#main-product-img {
+    width: 100%;
+    display: block;
+    transition: transform 0.1s ease-out;
+    transform-origin: center center;
 }
