@@ -393,6 +393,57 @@ span.left-rating::before {
     font-weight: 400;
     font-size: 12px;
 }
+.section-4{
+    background-color: #003D78;
+}
+.section-4 .section-4-container{
+    background-color: white;
+    width: 78.5%;
+}
+.ratio.ratio-16x9 {
+    width: 33rem;
+    height: 26rem;
+}
+.section-4-heading{
+    font-family: sans-serif;
+    color: rgb(0, 61, 120);
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+}
+.section-4 .section-4-text-simple{
+    color: rgb(55, 65, 81);
+    font-weight: 400;
+    font-size: 1.15rem;
+    line-height: 2rem;
+}
+.me-4-5 {
+    margin-right: 2.7rem !important;
+}
+.section-4-text-bold{
+    color: rgb(17, 24, 39);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.section-4 .section-4-button{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    background-color: #17803C;
+    color: #FFFFFF;
+    width: 37%;
+    height: 60px;
+    border-radius: 8px;
+}
+.section-4 .section-4-button:hover{
+    background-color: #156534 !important;
+    color: #FFFFFF !important;
+}
+.section-4 .section-4-button:active{
+    background-color: #156534 !important;
+    color: #FFFFFF !important;
+}
 /*ids*/
 #content-onetime .my-cards{
     height: 17.5rem;
