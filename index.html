@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="icon" type="image/x-icon" href="assets/fevicon/favicon.png">
 </head>
+
 <body>
     <!--NavBar-->
 
@@ -20,12 +21,12 @@
             <div class="row">
                 <div class="row container-fluid">
                     <!--Section 1 Left-->
-                    <div class="col-sm-6 mt-2">
+                    <div class="col-md-6 mt-2">
                         <div class="row">
                             <!--Left Scrollable-->
-                            <div class="col-3">
-                                <div class="container d-flex flex-column align-items-center py-3">
-                                    <button id="up" class="btn-nav mb-2 chevron-up" disabled>&#x2303</button>
+                            <div class="col-md-3 d-none d-md-block">
+                                <div class="container d-flex flex-column align-items-center py-lg-3">
+                                    <button id="up" class="btn-nav mb-md-2 chevron-up" disabled>&#x2303</button>
                                     <div class="v-viewport">
                                         <div id="track" class="v-track">
                                             <img src="assets/section-1/big-image-biotrust.webp" class="v-item rounded">
@@ -39,15 +40,16 @@
                                             <img src="assets/section-1/scroll-9.avif" class="v-item rounded">
                                         </div>
                                     </div>
-                                    <button id="down" class="btn-nav mt-2 chevron-down">&#x2303</button>
+                                    <button id="down" class="btn-nav mt-md-2 chevron-down">&#x2303</button>
                                 </div>
                             </div>
                             <!--Right Image Section-->
-                            <div class="col">
+                            <div class="col-md">
                                 <!--Image Header-->
-                                <div class="row py-2">
+                                <div class="row py-lg-2">
                                     <div class="row">
-                                        <h4 class="my-h4">AGELESS MULTI-COLLAGEN® PROTEIN POWDER</h4>
+                                        <h4 class="my-h4 d-flex justify-content-md-center ps-md-3">AGELESS
+                                            MULTI-COLLAGEN® PROTEIN POWDER</h4>
                                     </div>
                                     <div class="row">
                                         <span class="d-flex justify-content-center left-rating">Rated 4.8 out of
@@ -56,25 +58,76 @@
                                 </div>
                                 <!--Image-->
                                 <div class="row">
-                                    <div class="zoom-box" id="zoom-box">
+                                    <div class="zoom-box d-none d-md-block" id="zoom-box">
                                         <img src="assets/section-1/big-image-biotrust.webp" alt="biotrust-image"
                                             id="main-product-img">
+                                    </div>
+                                    <!--Corousal For mobiles-->
+                                    <div class="d-block d-md-none mb-4">
+                                        <div id="customCarousel" class="carousel slide" data-bs-touch="true">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="assets/section-1/big-image-biotrust.webp" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/section-1/scroll-1.avif" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/section-1/scroll-3.avif" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/section-1/scroll-4.avif" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/section-1/scroll-5.avif" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/section-1/scroll-6.avif" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/section-1/scroll-7.avif" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/section-1/scroll-8.avif" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/section-1/scroll-9.avif" class="d-block w-100" alt="...">
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-center align-items-center mt-3">
+                                                <button class="btn btn-outline-dark rounded-circle me-3 mobile-corousal-button" type="button"
+                                                    data-bs-target="#customCarousel" data-bs-slide="prev">
+                                                    <i class="bi bi-chevron-left">&lt;</i>
+                                                </button>
+
+                                                <div id="carousel-counter" class="fw-bold">
+                                                    1 out of 9
+                                                </div>
+
+                                                <button class="btn btn-outline-dark rounded-circle ms-3 mobile-corousal-button" type="button"
+                                                    data-bs-target="#customCarousel" data-bs-slide="next">
+                                                    <i class="bi bi-chevron-right">&gt;</i>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Section 1 Right-->
-                    <div class="col-sm-6 mt-2 py-3">
+                    <div class="col-md-6 mt-md-2 py-lg-3 section-1-right">
                         <!--Right Heading-->
                         <div class="row">
                             <!--Heading-->
                             <div class="row">
-                                <h4 class="my-h4 d-flex justify-content-center">Choose Your Package</h4>
+                                <h4 class="my-h4 d-flex justify-content-center"><span>Choose Your Package</span></h4>
                             </div>
                             <!--caption-->
                             <div class="row">
-                                <span class="d-flex justify-content-center">Select your money-saving option
+                                <span class="d-flex justify-content-center section-1-head-caption">Select your
+                                    money-saving option
                                     below:</span>
                             </div>
                         </div>
@@ -85,177 +138,407 @@
                                 <div class="d-grid">
                                     <input type="radio" class="btn-check" name="purchase-type" id="btn-onetime"
                                         onclick="switchContent('onetime')" checked>
-                                    <label class="btn section-1-class-button" for="btn-onetime"><span>One-Time
+                                    <label class="btn section-1-class-button section-1-class-button-left"
+                                        for="btn-onetime"><span>One-Time
                                             Purchase</span></label>
                                 </div>
                             </div>
                             <!--Right Button-->
-                            <div class="col-6 ms-n2">
+                            <div class="col-6">
                                 <div class="d-grid">
                                     <input type="radio" class="btn-check" name="purchase-type" id="btn-subscribe"
                                         onclick="switchContent('subscribe')">
-                                    <label class="btn section-1-class-button" for="btn-subscribe"><span>Subscribe & Save
+                                    <label class="btn section-1-class-button section-1-class-button-right px-md-4"
+                                        for="btn-subscribe"><span>Subscribe & Save
                                             Up To
                                             50%</span></label>
                                 </div>
                             </div>
                         </div>
-                        <!--Cards-1-->
-                        <div id="content-subscribe" class="row align-items-center purchase-content d-none">
-                            <!--Left Card-->
-                            <div class="col-3 my-cards mt-4 ms-3 left-card border-end-0">
-                                <div class="row cards-row-1">
-                                    <span class="d-flex justify-content-center mt-3">1 Bag</span>
+                        <!--Cards-->
+                        <!--Desktop Cards-->
+                        <div class="d-none d-lg-block">
+                            <!--Cards-1-->
+                            <div id="content-subscribe" class="row align-items-center purchase-content d-none">
+                                <!--Left Card-->
+                                <div class="col-3 my-cards mt-4 ms-3 left-card border-end-0">
+                                    <div class="row cards-row-1">
+                                        <span class="d-flex justify-content-center mt-3">1 Bag</span>
+                                    </div>
+                                    <div class="row cards-row-2">
+                                        <span class="d-flex justify-content-center mt-1">Every 1 Month</span>
+                                    </div>
+                                    <div class="row cards-row-3">
+                                        <span class="d-flex justify-content-center mt-3">$49</span>
+                                    </div>
+                                    <div class="row cards-row-4">
+                                        <span class="d-flex justify-content-center">$29.40</span>
+                                    </div>
+                                    <div class="row cards-row-5">
+                                        <span class="d-flex justify-content-center">Per Bag</span>
+                                    </div>
+                                    <div class="row cards-row-6 text-danger">
+                                        <span class="d-flex justify-content-center">(Save 40%)</span>
+                                    </div>
+                                    <div class="row cards-row-7">
+                                        <span class="d-flex justify-content-center">+ FREE SHIPPING</span>
+                                    </div>
+                                    <div class="row cards-row-8">
+                                        <button
+                                            class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                            FLAVOR</button>
+                                    </div>
                                 </div>
-                                <div class="row cards-row-2">
-                                    <span class="d-flex justify-content-center mt-1">Every 1 Month</span>
+                                <!--Middle Card-->
+                                <div class="col-3 my-cards mt-4 middle-card border-end-0">
+                                    <div class="row cards-row-1">
+                                        <span class="d-flex justify-content-center mt-3">3 Bags</span>
+                                    </div>
+                                    <div class="row cards-row-2">
+                                        <span class="d-flex justify-content-center mt-1">Every 3 Months</span>
+                                    </div>
+                                    <div class="row cards-row-3">
+                                        <span class="d-flex justify-content-center mt-3">$49</span>
+                                    </div>
+                                    <div class="row cards-row-4">
+                                        <span class="d-flex justify-content-center">$26.95</span>
+                                    </div>
+                                    <div class="row cards-row-5">
+                                        <span class="d-flex justify-content-center">Per Bag</span>
+                                    </div>
+                                    <div class="row cards-row-6 text-danger">
+                                        <span class="d-flex justify-content-center">(Save 45%)</span>
+                                    </div>
+                                    <div class="row cards-row-7">
+                                        <span class="d-flex justify-content-center">+ FREE SHIPPING</span>
+                                    </div>
+                                    <div class="row cards-row-8">
+                                        <button
+                                            class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                            FLAVORS</button>
+                                    </div>
                                 </div>
-                                <div class="row cards-row-3">
-                                    <span class="d-flex justify-content-center mt-3">$49</span>
-                                </div>
-                                <div class="row cards-row-4">
-                                    <span class="d-flex justify-content-center">$29.40</span>
-                                </div>
-                                <div class="row cards-row-5">
-                                    <span class="d-flex justify-content-center">Per Bag</span>
-                                </div>
-                                <div class="row cards-row-6 text-danger">
-                                    <span class="d-flex justify-content-center">(Save 40%)</span>
-                                </div>
-                                <div class="row cards-row-7">
-                                    <span class="d-flex justify-content-center">+ FREE SHIPPING</span>
-                                </div>
-                                <div class="row cards-row-8">
-                                    <button
-                                        class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
-                                        FLAVOR</button>
+                                <!--Right Card-->
+                                <div class="col-3 my-cards mt-4 right-card">
+                                    <div class="row cards-row-0">
+                                        <span class="d-flex justify-content-center ms-1 py-1">Most Savings</span>
+                                    </div>
+                                    <div class="row cards-row-1">
+                                        <span class="d-flex justify-content-center mt-2">6 Bags</span>
+                                    </div>
+                                    <div class="row cards-row-2">
+                                        <span class="d-flex justify-content-center mt-1">Every 6 Months</span>
+                                    </div>
+                                    <div class="row cards-row-3">
+                                        <span class="d-flex justify-content-center mt-2">$49</span>
+                                    </div>
+                                    <div class="row cards-row-4">
+                                        <span class="d-flex justify-content-center">$24.50</span>
+                                    </div>
+                                    <div class="row cards-row-5">
+                                        <span class="d-flex justify-content-center">Per Bag</span>
+                                    </div>
+                                    <div class="row cards-row-6 text-danger">
+                                        <span class="d-flex justify-content-center">(Save 50%)</span>
+                                    </div>
+                                    <div class="row cards-row-7">
+                                        <span class="d-flex justify-content-center">+ FREE SHIPPING</span>
+                                    </div>
+                                    <div class="row cards-row-8">
+                                        <button
+                                            class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                            FLAVORS</button>
+                                    </div>
                                 </div>
                             </div>
-                            <!--Middle Card-->
-                            <div class="col-3 my-cards mt-4 middle-card border-end-0">
-                                <div class="row cards-row-1">
-                                    <span class="d-flex justify-content-center mt-3">3 Bags</span>
+                            <!--Cards-2-->
+                            <div id="content-onetime" class="row align-items-center purchase-content">
+                                <!--Left Card-->
+                                <div class="col-3 my-cards mt-4 ms-3 left-card border-end-0">
+                                    <div class="row cards-row-1">
+                                        <span class="d-flex justify-content-center mt-3">1 Bag</span>
+                                    </div>
+                                    <div class="row cards-row-x">
+                                        <span class="d-flex justify-content-center mt-5">$49</span>
+                                    </div>
+                                    <div class="row cards-row-8 mt-4">
+                                        <button
+                                            class="btn mt-5 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                            FLAVOR</button>
+                                    </div>
                                 </div>
-                                <div class="row cards-row-2">
-                                    <span class="d-flex justify-content-center mt-1">Every 3 Months</span>
+                                <!--Middle Card-->
+                                <div class="col-3 my-cards mt-4 middle-card ">
+                                    <div class="row cards-row-0">
+                                        <span class="d-flex justify-content-center ms-1 py-1">Most Popular</span>
+                                    </div>
+                                    <div class="row cards-row-1">
+                                        <span class="d-flex justify-content-center mt-3">3 Bags</span>
+                                    </div>
+                                    <div class="row cards-row-3">
+                                        <span class="d-flex justify-content-center mt-3">$49</span>
+                                    </div>
+                                    <div class="row cards-row-4">
+                                        <span class="d-flex justify-content-center">$35</span>
+                                    </div>
+                                    <div class="row cards-row-5">
+                                        <span class="d-flex justify-content-center">Per Bag</span>
+                                    </div>
+                                    <div class="row cards-row-6 text-danger">
+                                        <span class="d-flex justify-content-center">(Save 28%)</span>
+                                    </div>
+                                    <div class="row cards-row-8">
+                                        <button
+                                            class="btn mt-3 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                            FLAVORS</button>
+                                    </div>
                                 </div>
-                                <div class="row cards-row-3">
-                                    <span class="d-flex justify-content-center mt-3">$49</span>
-                                </div>
-                                <div class="row cards-row-4">
-                                    <span class="d-flex justify-content-center">$26.95</span>
-                                </div>
-                                <div class="row cards-row-5">
-                                    <span class="d-flex justify-content-center">Per Bag</span>
-                                </div>
-                                <div class="row cards-row-6 text-danger">
-                                    <span class="d-flex justify-content-center">(Save 45%)</span>
-                                </div>
-                                <div class="row cards-row-7">
-                                    <span class="d-flex justify-content-center">+ FREE SHIPPING</span>
-                                </div>
-                                <div class="row cards-row-8">
-                                    <button
-                                        class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
-                                        FLAVORS</button>
-                                </div>
-                            </div>
-                            <!--Right Card-->
-                            <div class="col-3 my-cards mt-4 right-card">
-                                <div class="row cards-row-0">
-                                    <span class="d-flex justify-content-center ms-1 py-1">Most Savings</span>
-                                </div>
-                                <div class="row cards-row-1">
-                                    <span class="d-flex justify-content-center mt-2">6 Bags</span>
-                                </div>
-                                <div class="row cards-row-2">
-                                    <span class="d-flex justify-content-center mt-1">Every 6 Months</span>
-                                </div>
-                                <div class="row cards-row-3">
-                                    <span class="d-flex justify-content-center mt-2">$49</span>
-                                </div>
-                                <div class="row cards-row-4">
-                                    <span class="d-flex justify-content-center">$24.50</span>
-                                </div>
-                                <div class="row cards-row-5">
-                                    <span class="d-flex justify-content-center">Per Bag</span>
-                                </div>
-                                <div class="row cards-row-6 text-danger">
-                                    <span class="d-flex justify-content-center">(Save 50%)</span>
-                                </div>
-                                <div class="row cards-row-7">
-                                    <span class="d-flex justify-content-center">+ FREE SHIPPING</span>
-                                </div>
-                                <div class="row cards-row-8">
-                                    <button
-                                        class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
-                                        FLAVORS</button>
+                                <!--Right Card-->
+                                <div class="col-3 my-cards mt-4 right-card border-start-0">
+                                    <div class="row cards-row-1">
+                                        <span class="d-flex justify-content-center mt-3">6 Bags</span>
+                                    </div>
+                                    <div class="row cards-row-3">
+                                        <span class="d-flex justify-content-center mt-3">$49</span>
+                                    </div>
+                                    <div class="row cards-row-4">
+                                        <span class="d-flex justify-content-center">$31</span>
+                                    </div>
+                                    <div class="row cards-row-5">
+                                        <span class="d-flex justify-content-center">Per Bag</span>
+                                    </div>
+                                    <div class="row cards-row-6 text-danger">
+                                        <span class="d-flex justify-content-center">(Save 36%)</span>
+                                    </div>
+                                    <div class="row cards-row-8 mt-3">
+                                        <button
+                                            class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                            FLAVORS</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--Cards-2-->
-                        <div id="content-onetime" class="row align-items-center purchase-content">
-                            <!--Left Card-->
-                            <div class="col-3 my-cards mt-4 ms-3 left-card border-end-0">
-                                <div class="row cards-row-1">
-                                    <span class="d-flex justify-content-center mt-3">1 Bag</span>
+                        <!--Ipad/Mobile Cards-->
+                        <div class="d-block d-lg-none">
+                            <!--Cards-1-->
+                            <div id="content-subscribe-ipad" class="row align-items-center purchase-content d-none">
+                                <!--Row 1-->
+                                <div class="row my-small-cards mt-3">
+                                    <!--left image-->
+                                    <div class="col-4 d-flex align-items-center">
+                                        <img src="assets/section-1/ipads:mobile/1bag.png" alt="jsjs" height="40"
+                                            width="40" class="section-1-ipad-mobile pe-2">
+                                    </div>
+                                    <!--Center Content-->
+                                    <div class="col-4">
+                                        <div class="row cards-row-1">
+                                            <span class="d-flex justify-content-start mt-2">1 Bag</span>
+                                        </div>
+                                        <div class="row cards-row-2">
+                                            <span class="d-flex justify-content-start">Every 1 Month</span>
+                                        </div>
+                                        <div class="row cards-row-3">
+                                            <span class="d-flex justify-content-start">$49</span>
+                                        </div>
+                                        <div class="row cards-row-4">
+                                            <span class="d-flex justify-content-start">$29.40</span>
+                                        </div>
+                                        <div class="row cards-row-5">
+                                            <span class="d-flex justify-content-start">Per Bag</span>
+                                        </div>
+                                        <div class="row cards-row-6 text-danger">
+                                            <span class="d-flex justify-content-start">(Save 40%)</span>
+                                        </div>
+                                        <div class="row cards-row-7">
+                                            <span class="d-flex justify-content-start mb-3">+ FREE SHIPPING</span>
+                                        </div>
+                                    </div>
+                                    <!--Right Button-->
+                                    <div class="col-4 d-flex justify-content-end align-items-center">
+                                        <div class="cards-row-8 d-flex">
+                                            <button
+                                                class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                                FLAVORS</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row cards-row-x">
-                                    <span class="d-flex justify-content-center mt-5">$49</span>
+                                <!--Row 2-->
+                                <div class="row my-small-cards mt-1">
+                                    <!--left image-->
+                                    <div class="col-4 d-flex align-items-center">
+                                        <img src="assets/section-1/ipads:mobile/3bags.png" alt="jsjs" height="40"
+                                            width="40" class="section-1-ipad-mobile pe-2">
+                                    </div>
+                                    <!--Center Content-->
+                                    <div class="col-4">
+                                        <div class="row cards-row-1">
+                                            <span class="d-flex justify-content-start mt-2">3 Bags</span>
+                                        </div>
+                                        <div class="row cards-row-2">
+                                            <span class="d-flex justify-content-start">Every 3 Months</span>
+                                        </div>
+                                        <div class="row cards-row-3">
+                                            <span class="d-flex justify-content-start">$49</span>
+                                        </div>
+                                        <div class="row cards-row-4">
+                                            <span class="d-flex justify-content-start">$26.95</span>
+                                        </div>
+                                        <div class="row cards-row-5">
+                                            <span class="d-flex justify-content-start">Per Bag</span>
+                                        </div>
+                                        <div class="row cards-row-6 text-danger">
+                                            <span class="d-flex justify-content-start">(Save 45%)</span>
+                                        </div>
+                                        <div class="row cards-row-7">
+                                            <span class="d-flex justify-content-start mb-3">+ FREE SHIPPING</span>
+                                        </div>
+                                    </div>
+                                    <!--Right Button-->
+                                    <div class="col-4 d-flex justify-content-end align-items-center">
+                                        <div class="cards-row-8 d-flex">
+                                            <button
+                                                class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                                FLAVORS</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row cards-row-8 mt-4">
-                                    <button
-                                        class="btn mt-5 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
-                                        FLAVOR</button>
+                                <!--Row 3-->
+                                <div class="row my-small-cards mt-1">
+                                    <!--left image-->
+                                    <div class="col-4 d-flex align-items-center">
+                                        <img src="assets/section-1/ipads:mobile/3bags.png" alt="jsjs" height="40"
+                                            width="40" class="section-1-ipad-mobile pe-2">
+                                    </div>
+                                    <!--Center Content-->
+                                    <div class="col-4">
+                                        <div class="row cards-row-1">
+                                            <span class="d-flex justify-content-start mt-2">6 Bags</span>
+                                        </div>
+                                        <div class="row cards-row-2">
+                                            <span class="d-flex justify-content-start">Every 6 Months</span>
+                                        </div>
+                                        <div class="row cards-row-3">
+                                            <span class="d-flex justify-content-start">$49</span>
+                                        </div>
+                                        <div class="row cards-row-4">
+                                            <span class="d-flex justify-content-start">$24.50</span>
+                                        </div>
+                                        <div class="row cards-row-5">
+                                            <span class="d-flex justify-content-start">Per Bag</span>
+                                        </div>
+                                        <div class="row cards-row-6 text-danger">
+                                            <span class="d-flex justify-content-start">(Save 50%)</span>
+                                        </div>
+                                        <div class="row cards-row-7">
+                                            <span class="d-flex justify-content-start mb-3">+ FREE SHIPPING</span>
+                                        </div>
+                                    </div>
+                                    <!--Right Button-->
+                                    <div class="col-4 d-flex justify-content-end align-items-center">
+                                        <div class="cards-row-8 d-flex">
+                                            <button
+                                                class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                                FLAVORS</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!--Middle Card-->
-                            <div class="col-3 my-cards mt-4 middle-card ">
-                                <div class="row cards-row-0">
-                                    <span class="d-flex justify-content-center ms-1 py-1">Most Popular</span>
+                            <!--Cards-2-->
+                            <div id="content-onetime-ipad" class="row align-items-center purchase-content">
+                                <!--Row 1-->
+                                <div class="row my-small-cards mt-3">
+                                    <!--left image-->
+                                    <div class="col-4 d-flex align-items-center">
+                                        <img src="assets/section-1/ipads:mobile/1bag.png" alt="jsjs" height="40"
+                                            width="40" class="section-1-ipad-mobile pe-2">
+                                    </div>
+                                    <!--Center Content-->
+                                    <div class="col-4">
+                                        <div class="row cards-row-1">
+                                            <span class="d-flex justify-content-start mt-2">1 Bag</span>
+                                        </div>
+                                        <div class="row cards-row-3">
+                                            <span class="d-flex justify-content-start price">$49</span>
+                                        </div>
+                                    </div>
+                                    <!--Right Button-->
+                                    <div class="col-4 d-flex justify-content-end align-items-center">
+                                        <div class="cards-row-8 d-flex">
+                                            <button
+                                                class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                                FLAVOR</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row cards-row-1">
-                                    <span class="d-flex justify-content-center mt-3">3 Bags</span>
+                                <!--Row 2-->
+                                <div class="row my-small-cards mt-1 big-row">
+                                    <!--left image-->
+                                    <div class="col-4 d-flex align-items-center">
+                                        <img src="assets/section-1/ipads:mobile/3bags.png" alt="jsjs" height="40"
+                                            width="40" class="section-1-ipad-mobile pe-2">
+                                    </div>
+                                    <!--Center Content-->
+                                    <div class="col-4 pt-md-5">
+                                        <div class="row cards-row-1">
+                                            <span class="d-flex justify-content-start mt-2">3 Bags</span>
+                                        </div>
+                                        <div class="row cards-row-3">
+                                            <span class="d-flex justify-content-start">$49</span>
+                                        </div>
+                                        <div class="row cards-row-4">
+                                            <span class="d-flex justify-content-start">$31<span
+                                                    class="d-flex justify-content-start align-items-end ps-1">Per
+                                                    Bag</span></span>
+                                        </div>
+
+                                        <div class="row cards-row-6 text-danger">
+                                            <span class="d-flex justify-content-start">(Save 28%)</span>
+                                        </div>
+
+                                    </div>
+                                    <!--Right Button-->
+                                    <div class="col-4 d-flex justify-content-end align-items-center">
+                                        <div class="cards-row-8 d-flex">
+                                            <button
+                                                class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                                FLAVOR S</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row cards-row-3">
-                                    <span class="d-flex justify-content-center mt-3">$49</span>
-                                </div>
-                                <div class="row cards-row-4">
-                                    <span class="d-flex justify-content-center">$35</span>
-                                </div>
-                                <div class="row cards-row-5">
-                                    <span class="d-flex justify-content-center">Per Bag</span>
-                                </div>
-                                <div class="row cards-row-6 text-danger">
-                                    <span class="d-flex justify-content-center">(Save 28%)</span>
-                                </div>
-                                <div class="row cards-row-8">
-                                    <button
-                                        class="btn mt-3 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
-                                        FLAVORS</button>
-                                </div>
-                            </div>
-                            <!--Right Card-->
-                            <div class="col-3 my-cards mt-4 right-card border-start-0">
-                                <div class="row cards-row-1">
-                                    <span class="d-flex justify-content-center mt-3">6 Bags</span>
-                                </div>
-                                <div class="row cards-row-3">
-                                    <span class="d-flex justify-content-center mt-3">$49</span>
-                                </div>
-                                <div class="row cards-row-4">
-                                    <span class="d-flex justify-content-center">$31</span>
-                                </div>
-                                <div class="row cards-row-5">
-                                    <span class="d-flex justify-content-center">Per Bag</span>
-                                </div>
-                                <div class="row cards-row-6 text-danger">
-                                    <span class="d-flex justify-content-center">(Save 36%)</span>
-                                </div>
-                                <div class="row cards-row-8 mt-3">
-                                    <button
-                                        class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
-                                        FLAVORS</button>
+                                <!--Row 3-->
+                                <div class="row my-small-cards mt-1 big-row">
+                                    <!--left image-->
+                                    <div class="col-4 d-flex align-items-center">
+                                        <img src="assets/section-1/ipads:mobile/6bags.png" alt="jsjs" height="40"
+                                            width="40" class="section-1-ipad-mobile pe-2">
+                                    </div>
+                                    <!--Center Content-->
+                                    <div class="col-4 pt-md-5">
+                                        <div class="row cards-row-1">
+                                            <span class="d-flex justify-content-start mt-2">6 Bags</span>
+                                        </div>
+                                        <div class="row cards-row-3">
+                                            <span class="d-flex justify-content-start">$49</span>
+                                        </div>
+                                        <div class="row cards-row-4">
+                                            <span class="d-flex justify-content-start">$31<span
+                                                    class="d-flex justify-content-start align-items-end ps-1">Per
+                                                    Bag</span></span>
+                                        </div>
+
+                                        <div class="row cards-row-6 text-danger">
+                                            <span class="d-flex justify-content-start">(Save 36%)</span>
+                                        </div>
+
+                                    </div>
+                                    <!--Right Button-->
+                                    <div class="col-4 d-flex justify-content-end align-items-center">
+                                        <div class="cards-row-8 d-flex">
+                                            <button
+                                                class="btn mt-4 d-flex justify-content-center ms-4 mb-3 py-2 my-switch-button">CHOOSE
+                                                FLAVOR S</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -341,16 +624,16 @@
                             </h1>
                         </div>
                         <div class="row">
-                            <p class="d-flex justify-content-center text-light mb-4">with our 22-gram blend of ALL five
+                            <p class="d-flex justify-content-center text-light mb-4 px-5">with our 22-gram blend of ALL five
                                 premium collagens</p>
                         </div>
                     </div>
                     <!--Content-->
                     <div class="row">
                         <!--Left Image-->
-                        <div class="col-6">
+                        <div class="col-md-6 col-12">
                             <div class="row">
-                                <span class="col-2"></span>
+                                <span class="col-lg-2"></span>
                                 <div class="col-10 container hexagon-wrapper">
                                     <!-- The Hexagon SVG -->
                                     <svg class="hexagon-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org">
@@ -358,12 +641,12 @@
                                             fill="none" stroke="#3C6494" stroke-width="1.5" />
                                     </svg>
                                     <img src="assets/section-2/support_within-amc.webp" alt="biotrust-image"
-                                        class="section-2-left-image ms-2 ">
+                                        class="section-2-left-image ms-lg-2 ">
                                 </div>
                             </div>
                         </div>
                         <!--Right Content-->
-                        <div class="col-6 mt-4">
+                        <div class="col-md-6 mt-md-4 col-12 section-2-right">
                             <!--Row 1-->
                             <div class="row section-2-right-row mt-3">
                                 <!--Icon-->
@@ -373,7 +656,7 @@
                                     </div>
                                 </div>
                                 <!--Text-->
-                                <div class="col-8 ms-3">
+                                <div class="col-lg-8 col-9 ms-lg-3 ms-5">
                                     <div class="row">
                                         <h6 class="section-2-right-head text-light">SKIN, HAIR & NAIL BOOST</h6>
                                     </div>
@@ -392,7 +675,7 @@
                                     </div>
                                 </div>
                                 <!--Text-->
-                                <div class="col-8 ms-3">
+                                <div class="col-lg-8 col-9 ms-lg-3 ms-5">
                                     <div class="row">
                                         <h6 class="section-2-right-head text-light">JOINT & BONE HEALTH</h6>
                                     </div>
@@ -411,7 +694,7 @@
                                     </div>
                                 </div>
                                 <!--Text-->
-                                <div class="col-8 ms-3">
+                                <div class="col-lg-8 col-9 ms-lg-3 ms-5">
                                     <div class="row">
                                         <h6 class="section-2-right-head text-light">MUSCLE & TENDON SUPPORT</h6>
                                     </div>
@@ -430,7 +713,7 @@
                                     </div>
                                 </div>
                                 <!--Text-->
-                                <div class="col-8 ms-3">
+                                <div class="col-lg-8 col-9 ms-lg-3 ms-5">
                                     <div class="row">
                                         <h6 class="section-2-right-head text-light">GUT HEALTH</h6>
                                     </div>

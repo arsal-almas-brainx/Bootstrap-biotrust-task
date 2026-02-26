@@ -6,9 +6,9 @@ const downBtn = document.getElementById('down');
 let currentIdx = 0;
 const total = track.children.length;
 const visible = 5;
-const step = 110; // Image height (100) + Gap (10)
 
 function scroll() {
+    const step = (window.innerWidth >= 992) ? 110 : 90; //img height with gap
     track.style.transform = `translateY(-${currentIdx * step}px)`;
     upBtn.disabled = (currentIdx === 0);
     downBtn.disabled = (currentIdx >= total - visible);
@@ -29,11 +29,20 @@ downBtn.addEventListener('click', () => {
 });
 //button switching section 1 right
 function switchContent(type) {
+    
     document.querySelectorAll('.purchase-content').forEach(div => {
         div.classList.add('d-none');
     });
-    const targetId = 'content-' + type;
-    document.getElementById(targetId).classList.remove('d-none');
+    const desktopTarget = 'content-' + type;
+    const desktopEl = document.getElementById(desktopTarget);
+    if (desktopEl) {
+        desktopEl.classList.remove('d-none');
+    }
+    const ipadTarget = 'content-' + type + '-ipad';
+    const ipadEl = document.getElementById(ipadTarget);
+    if (ipadEl) {
+        ipadEl.classList.remove('d-none');
+    }
 }
 //image scrolling section 1 right footer
 (function() {
@@ -120,4 +129,14 @@ zoomBox.addEventListener('mousemove', (e) => {
 
 zoomBox.addEventListener('mouseleave', () => {
     mainImg.style.transformOrigin = 'center center';
+});
+//Mobile Corousal section 1
+const myCarousel = document.getElementById('customCarousel');
+const counter = document.getElementById('carousel-counter');
+const totalItems = document.querySelectorAll('.carousel-item').length;
+
+myCarousel.addEventListener('slid.bs.carousel', function (event) {
+  // event.to is the index of the current slide (starts at 0)
+  const currentIndex = event.to + 1;
+  counter.innerText = `${currentIndex} out of ${totalItems}`;
 });

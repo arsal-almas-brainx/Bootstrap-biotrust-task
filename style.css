@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
 @property --my-green {
-  syntax: '<color>';
-  inherits: true;
-  initial-value: #16803C;
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #16803C;
 }
-@property --my-blue{
+
+@property --my-blue {
     syntax: '<color>';
     inherits: true;
     initial-value: #0E4F9A;
 }
-@property --my-green-dark{
+
+@property --my-green-dark {
     syntax: '<color>';
     inherits: true;
     initial-value: #0e5226;
 }
+
 /*Elements*/
 body {
     font-family: 'System-UI', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 :root {
     --img-size: 100px;
     --gap: 10px;
@@ -27,93 +32,110 @@ body {
     --my-blue: #0E4F9A;
     --my-green-dark: #0e5226
 }
-label.btn.section-1-class-button:hover{
-    color: var(--my-blue); 
+
+label.btn.section-1-class-button:hover {
+    color: var(--my-blue);
     border: 0.1rem solid var(--my-blue);
     border-radius: 4px;
     transition: border 0.1s ease-in;
 }
-h4.my-h4.d-flex.justify-content-center{
+
+h4.my-h4.d-flex.justify-content-center {
     font-size: 1.5rem;
 }
+
 label.btn.section-1-class-button {
-    color: var(--my-blue); 
+    color: var(--my-blue);
     border: 1px solid var(--my-blue);
     border-radius: 4px;
     margin-left: -0.5rem;
 }
-span.left-rating{
+
+span.left-rating {
     margin-top: -9px;
-    display: flex;             
-    align-items: center; 
-    font-weight: 700;      
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: clamp(0.9rem, 1.11vw, 1rem);
 }
+
 span.left-rating::before {
     content: "★★★★★";
     display: inline-block;
-    color: #4CAF51;           
-    font-size: 1.1rem;        
-    position: static; 
+    color: #4CAF51;
+    font-size: clamp(0.8rem, 1.22vw, 1.1rem);
+    position: static;
     transform: none;
 }
+
 /*Classes*/
 .v-viewport {
     height: calc((var(--step) * var(--visible)) - var(--gap));
     width: var(--img-size);
     overflow: hidden;
 }
+
 .v-track {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
     transition: transform 0.4s ease-in-out;
 }
+
 .v-item {
     height: var(--img-size);
     width: var(--img-size);
     object-fit: cover;
     cursor: pointer;
     transition: opacity 0.2s, border 0.2s;
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
     margin-bottom: 10px;
 }
+
 .v-item:hover {
-    opacity: 0.8; 
+    opacity: 0.8;
 }
+
 .v-item.active-thumb {
-    border-color: #007bff !important; 
+    border-color: #007bff !important;
     opacity: 1;
 }
+
 .h-viewport {
     width: 100%;
     overflow: hidden;
     cursor: grab;
     user-select: none;
 }
+
 .h-track {
     display: flex;
-    transition: transform 0.1s ease-out; 
+    transition: transform 0.1s ease-out;
 }
+
 .h-item {
-    flex: 0 0 20%; 
+    flex: 0 0 20%;
     box-sizing: border-box;
-    padding: 2px; 
+    padding: 2px;
 }
+
 .item-bg {
     background-color: #E1E1E1;
-    padding: 10px;      
-    padding-bottom: 24px; 
+    padding: 10px;
+    padding-bottom: 24px;
     padding-top: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .item-bg img {
     width: 100%;
-    height: 120px;   
+    height: 120px;
     object-fit: cover;
-    pointer-events: none; 
+    pointer-events: none;
 }
+
 .btn-nav {
     background-color: var(--my-green);
     color: white;
@@ -127,83 +149,103 @@ span.left-rating::before {
     cursor: pointer;
     font-size: 19px;
 }
+
 .btn-nav:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
 .chevron-up {
     display: inline-block;
 }
+
 .chevron-down {
     display: inline-block;
     transform: rotate(180deg);
 }
-.my-h4{
+
+.my-h4 {
     color: var(--my-blue);
     font-weight: 700;
-    font-size: 1.32rem;
+    font-size: clamp(0.6rem, 1.46vw, 1.32rem);
 }
+
 .row {
-    --bs-gutter-x: 1.5rem; 
+    --bs-gutter-x: 1.5rem;
 }
-.row > * {
+
+.row>* {
     padding-right: calc(var(--bs-gutter-x) * .3) !important;
     padding-left: calc(var(--bs-gutter-x) * .3) !important;
 }
-.btn-check:checked + label.btn.section-1-class-button{
+
+.btn-check:checked+label.btn.section-1-class-button {
     background-color: var(--my-blue);
     color: white;
 }
+
 .section-1-class-button span {
     font-size: 0.9rem;
     font-weight: 700;
 }
-.my-cards{
+
+.my-cards {
     border: 0.1rem solid var(--my-blue);
 }
-.cards-row-1 span{
+
+.cards-row-1 span {
     color: var(--my-blue);
     font-weight: 700;
     font-size: 28px;
 }
-.cards-row-2 span{
+
+.cards-row-2 span {
     color: var(--my-blue);
     font-size: 22px;
 }
-.cards-row-3 span{
+
+.cards-row-3 span {
     font-weight: 700;
     font-size: 19px;
     text-decoration: line-through;
 }
-.cards-row-4 span{
+
+.cards-row-4 span {
     color: var(--my-green);
     font-size: 30px;
     font-weight: 700;
     margin-top: -6px;
 }
-.cards-row-x span{
+
+.cards-row-x span {
     font-size: 32px;
     font-weight: 700;
     margin-top: -6px;
 }
-.cards-row-5 span{
+
+.cards-row-5 span {
     color: var(--my-green);
     font-weight: 700;
     margin-top: -6px;
 }
-.cards-row-6 span{
+
+.cards-row-6 span {
     font-weight: 700;
 }
-.cards-row-7 span{
+
+.cards-row-7 span {
     font-weight: 700;
     font-size: 13px;
 }
+
 .col-3.my-cards.mt-4 {
     width: 14rem;
 }
-.row.section-1-switch-buttons{
+
+.row.section-1-switch-buttons {
     width: 44.2rem;
 }
+
 .row .my-switch-button {
     background-color: var(--my-green);
     width: 11.3rem;
@@ -211,10 +253,12 @@ span.left-rating::before {
     font-size: 0.8rem;
     font-weight: 700;
 }
+
 .col-3.my-cards.mt-4.right-card {
     height: 21.3rem;
     border: 0.17rem solid var(--my-blue);
 }
+
 .cards-row-0 span {
     background-color: var(--my-blue);
     color: white;
@@ -223,112 +267,133 @@ span.left-rating::before {
     font-size: 1.11rem;
     font-weight: 700;
 }
-.row .my-switch-button:hover{
+
+.row .my-switch-button:hover {
     background-color: var(--my-green-dark);
     color: white;
 }
-.section-2{
+
+.section-2 {
     background-color: #003D78;
 }
-.section-2 div h1{
+
+.section-2 div h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 3.14rem;
 }
-.section-2 div p.text-light{
+
+.section-2 div p.text-light {
     font-size: 1.5rem;
     font-weight: 300;
 }
+
 .hover-circle {
-  width: 65px;
-  height: 65px;
-  border: 0.04rem solid #fcfcfc; 
-  border-radius: 50%;        
-  overflow: hidden;          
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease; 
-  cursor: pointer;
-  background-color: #1F3A5F;
-  position: relative;
-  left: -17px;
+    width: 65px;
+    height: 65px;
+    border: 0.04rem solid #fcfcfc;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background-color: #1F3A5F;
+    position: relative;
+    left: -17px;
 }
+
 .hover-circle img {
-  width: 93%;
-  height: 93%;
-  object-fit: cover;
-  transition: width 0.3s ease, height 0.3s ease;
+    width: 93%;
+    height: 93%;
+    object-fit: cover;
+    transition: width 0.3s ease, height 0.3s ease;
 }
-.section-2-right-head{
+
+.section-2-right-head {
     font-weight: 700;
     font-size: 1.12rem;
 }
-.section-2-right-text{
+
+.section-2-right-text {
     color: #E5E7EB;
     font-size: 1rem;
     font-weight: 400;
     transition: color 0.3s ease;
     line-height: 1.6rem;
 }
-.section-2-right-row:hover .hover-circle{
+
+.section-2-right-row:hover .hover-circle {
     transform: scale(1.1);
 }
-.section-2-right-row:hover .section-2-right-text{
+
+.section-2-right-row:hover .section-2-right-text {
     color: white;
 }
-.section-2-right-row:hover .hover-circle img{
+
+.section-2-right-row:hover .hover-circle img {
     width: 100%;
     height: 100%;
 }
-.section-2-right-row:hover{
+
+.section-2-right-row:hover {
     transform: translateX(0.5rem);
 }
-.section-2-right-row{
+
+.section-2-right-row {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
-.section-2-left-image{
+
+.section-2-left-image {
     max-width: 500px;
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     display: block;
 }
+
 .hexagon-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .hexagon-svg {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.2); 
+    transform: translate(-50%, -50%) scale(1.2);
     width: 104%;
     height: 104%;
     z-index: 1;
     pointer-events: none;
 }
+
 .zoom-box {
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
     cursor: zoom-in;
     border-radius: 4px;
     background-color: #fff;
 }
+
 .zoom-box:hover #main-product-img {
-    transform: scale(2); 
+    transform: scale(2);
 }
-.section-3{
+
+.section-3 {
     background-color: #F2F3F6;
 }
-.section-3-head{
+
+.section-3-head {
     font-size: 2.2rem;
     font-weight: 700;
     color: rgb(0, 61, 120);
     line-height: 2.4rem;
 }
+
 .my-custom-avatar {
     width: 16rem;
     height: 16rem;
@@ -338,95 +403,113 @@ span.left-rating::before {
     outline-offset: 0.55rem;
     display: block;
 }
-.section-3-card{
+
+.section-3-card {
     max-width: 19.2rem;
 }
+
 .star-rating {
-  gap: 8px; 
-  font-size: 1rem;
-  color: #FACC14; 
+    gap: 8px;
+    font-size: 1rem;
+    color: #FACC14;
 }
-.section-3 .section-3-card .card-text{
+
+.section-3 .section-3-card .card-text {
     color: rgb(55, 65, 81);
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
 }
+
 .custom-check-badge {
-  width: 21px;
-  height: 21px;
-  background-color: #16A349; 
-  border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    background-color: #16A349;
+    border-radius: 50%;
 }
+
 .custom-check-badge svg {
-  width: 60%; 
-  height: 60%;
-  color: white;
+    width: 60%;
+    height: 60%;
+    color: white;
 }
-.custom-check-badge-text{
+
+.custom-check-badge-text {
     color: rgb(75, 85, 99);
     font-weight: 400;
     line-height: 20px;
     font-size: 14px;
 }
-.section-3-card-footer{
+
+.section-3-card-footer {
     background-color: #0E4F9A;
     margin-left: -2rem;
     margin-right: -2em;
     margin-bottom: -1rem;
 }
-.section-3-card-footer-text{
-    color: rgb(255,255,255);
+
+.section-3-card-footer-text {
+    color: rgb(255, 255, 255);
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     padding-top: 2rem;
 }
-.section-3-card-button{
+
+.section-3-card-button {
     width: auto;
     height: 1.5rem;
     margin-bottom: 2rem;
     padding: 10px !important;
 }
-.section-3-card-button span{
+
+.section-3-card-button span {
     color: rgb(13, 79, 154);
     font-weight: 400;
     font-size: 12px;
 }
-.section-4{
+
+.section-4 {
     background-color: #003D78;
 }
-.section-4 .section-4-container{
+
+.section-4 .section-4-container {
     background-color: white;
     width: 78.5%;
 }
+
 .ratio.ratio-16x9 {
     width: 33rem;
     height: 26rem;
 }
-.section-4-heading{
+
+.section-4-heading {
     font-family: sans-serif;
     color: rgb(0, 61, 120);
     font-weight: 700;
     font-size: 1.9rem;
     line-height: 2.2rem;
 }
-.section-4 .section-4-text-simple{
+
+.section-4 .section-4-text-simple {
     color: rgb(55, 65, 81);
     font-weight: 400;
     font-size: 1.15rem;
     line-height: 2rem;
 }
+
 .me-4-5 {
     margin-right: 2.7rem !important;
 }
-.section-4-text-bold{
+
+.section-4-text-bold {
     color: rgb(17, 24, 39);
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.5rem;
 }
-.section-4 .section-4-button{
+
+.section-4 .section-4-button {
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
@@ -436,26 +519,228 @@ span.left-rating::before {
     height: 60px;
     border-radius: 8px;
 }
-.section-4 .section-4-button:hover{
+
+.section-4 .section-4-button:hover {
     background-color: #156534 !important;
     color: #FFFFFF !important;
 }
-.section-4 .section-4-button:active{
+
+.section-4 .section-4-button:active {
     background-color: #156534 !important;
     color: #FFFFFF !important;
+}
+.section-1-ipad-mobile{
+    height: 105px;
+    width: 100px;
+    object-fit: cover;
+}
+
+
+.rounded-circle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#carousel-counter {
+  font-family: sans-serif;
+  color: #333;
+  min-width: 100px;
+  text-align: center;
+}
+.mobile-corousal-button{
+    background-color: var(--my-green) !important;
+    color: white !important;
+    border: none !important;
 }
 /*ids*/
-#content-onetime .my-cards{
+#content-onetime .my-cards {
     height: 17.5rem;
     border: 0.1rem solid var(--my-blue);
 }
-#content-onetime .middle-card{
+
+#content-onetime .middle-card {
     height: 19rem;
     border: 0.17rem solid var(--my-blue);
 }
+
 #main-product-img {
     width: 100%;
     display: block;
     transition: transform 0.1s ease-out;
     transform-origin: center center;
+}
+
+/*Responsiveness*/
+@media (max-width: 991.98px) {
+    .my-h4 {
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .v-item {
+        width: 80px;
+        height: 80px;
+        margin-left: 13px;
+    }
+
+    .chevron-up {
+        width: 82px;
+        margin-left: 7px;
+        height: 30px;
+    }
+
+    .chevron-down {
+        width: 82px;
+        margin-left: 7px;
+        height: 30px;
+    }
+
+    .v-viewport {
+        height: 472px;
+    }
+
+    h4.my-h4.d-flex.justify-content-center {
+        font-size: 1.2rem;
+    }
+
+    .row.section-1-switch-buttons {
+        width: 114%;
+    }
+
+    .section-1-head-caption {
+        font-size: 13px;
+        margin-top: -8px !important;
+    }
+
+    .label.btn.section-1-class-button {
+        border: 2px solid var(--my-blue);
+    }
+
+    .item-bg.shadow-sm {
+        height: 75px;
+        width: 72px;
+    }
+
+    .item-bg img {
+        height: 70px;
+    }
+
+    .my-small-cards {
+        border: 3px solid var(--my-blue);
+        margin-left: 10px !important;
+        margin-top: 0.1rem;
+    }
+
+    .cards-row-1 span {
+        font-size: 18px;
+    }
+
+    .cards-row-2 span {
+        font-size: 12px;
+        margin-top: -4px;
+    }
+
+    .cards-row-3 span {
+        font-size: 15px;
+        margin-top: -3px;
+    }
+
+    .cards-row-4 span {
+        font-size: 18px;
+        padding-top: 0.2rem;
+    }
+    .cards-row-5 span {
+        font-size: 13px;
+        padding-top: 0.16rem;
+    }
+
+    .cards-row-6 span {
+        font-size: 15px;
+        margin-top: -0.1rem;
+    }
+
+    .cards-row-7 span {
+        font-weight: 600;
+        font-size: 11px;
+        margin-top: -0.1rem;
+    }
+    #main-product-img{
+        width: 90%;
+    }
+    .row .my-switch-button{
+        width: auto;
+        margin-right: -10px;
+        border-radius: 4px;
+    }
+    .cards-row-3 span.price{
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 900;
+        padding-top: 17px;
+    }
+    .big-row{
+        height: 200px;
+    }
+    .cards-row-4 span span {
+        font-size: 13px;
+        font-weight: 800;
+    }
+    .section-1-class-button span{
+        font-size: 1.1rem;
+    }
+    .section-2 div h1{
+        font-size: 2.7rem;
+    }
+    .section-2-left-image{
+        max-width: 430px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .big-row{
+        height: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section-2 div h1{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .section-2 div p.text-light{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .section-2-left-image{
+        max-width: 360px;
+        padding-bottom: 4rem;
+    }
+    .section-2-right{
+        padding-left: 2.5rem !important;
+    }
+
+}
+@media (min-width: 782px){
+    .section-1-class-button-left{
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+@media (min-width:992px) and (max-width:1371px){
+    #content-onetime .my-cards{
+        width: 166px;
+    }
+    .row .my-switch-button{
+        width: 7.3rem;
+        font-size: 0.65rem;
+    }
+    .row.section-1-switch-buttons{
+        width: auto;
+    }
+}
 }
