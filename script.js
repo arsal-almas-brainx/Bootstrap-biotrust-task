@@ -133,12 +133,14 @@ zoomBox.addEventListener('mouseleave', () => {
 //Mobile Corousal section 1
 const myCarousel = document.getElementById('customCarousel');
 const counter = document.getElementById('carousel-counter');
-const totalItems = document.querySelectorAll('.carousel-item').length;
+const progressBar = document.getElementById('carousel-progress-bar');
+const totalItems = document.querySelectorAll('#customCarousel .carousel-item').length;
 
-myCarousel.addEventListener('slid.bs.carousel', function (event) {
-  // event.to is the index of the current slide (starts at 0)
-  const currentIndex = event.to + 1;
-  counter.innerText = `${currentIndex} out of ${totalItems}`;
+myCarousel.addEventListener('slide.bs.carousel', function (event) {
+    const currentIndex = event.to + 1;
+    counter.innerText = `${currentIndex} out of ${totalItems}`;
+    const progressPercent = (currentIndex / totalItems) * 100;
+    progressBar.style.width = progressPercent + "%";
 });
 //section 3 crousal mobile
 document.addEventListener("DOMContentLoaded", function() {

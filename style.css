@@ -97,7 +97,7 @@ span.left-rating::before {
 }
 
 .v-item.active-thumb {
-    border-color: #007bff !important;
+    border-color: var(--my-blue) !important;
     opacity: 1;
 }
 
@@ -149,9 +149,17 @@ span.left-rating::before {
     cursor: pointer;
     font-size: 19px;
 }
-
+.section-1-mobile-carousal-progress{
+    width: 250px; 
+    height: 5px !important; 
+}
+.section-1-mobile-carousal-progress-inner{
+    width: 11.11%; 
+    background-color: var(--my-blue); 
+    transition: width 0.3s ease;
+}
 .btn-nav:disabled {
-    background-color: #ccc;
+    background-color: #7EB093;
     cursor: not-allowed;
 }
 

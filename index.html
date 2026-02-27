@@ -24,20 +24,20 @@
                     <div class="col-md-6 mt-2">
                         <div class="row">
                             <!--Left Scrollable-->
-                            <div class="col-md-3 d-none d-md-block">
+                            <div class="col-md-3 d-none d-md-block ms-lg-2">
                                 <div class="container d-flex flex-column align-items-center py-lg-3">
                                     <button id="up" class="btn-nav mb-md-2 chevron-up" disabled>&#x2303</button>
                                     <div class="v-viewport">
                                         <div id="track" class="v-track">
-                                            <img src="assets/section-1/big-image-biotrust.webp" class="v-item rounded">
-                                            <img src="assets/section-1/scroll-2.avif" class="v-item rounded">
-                                            <img src="assets/section-1/scroll-3.avif" class="v-item rounded">
-                                            <img src="assets/section-1/scroll-4.avif" class="v-item rounded">
-                                            <img src="assets/section-1/scroll-5.avif" class="v-item rounded">
-                                            <img src="assets/section-1/scroll-6.avif" class="v-item rounded">
-                                            <img src="assets/section-1/scroll-7.avif" class="v-item rounded">
-                                            <img src="assets/section-1/scroll-8.avif" class="v-item rounded">
-                                            <img src="assets/section-1/scroll-9.avif" class="v-item rounded">
+                                            <img src="assets/section-1/big-image-biotrust.webp" class="v-item">
+                                            <img src="assets/section-1/scroll-2.avif" class="v-item">
+                                            <img src="assets/section-1/scroll-3.avif" class="v-item">
+                                            <img src="assets/section-1/scroll-4.avif" class="v-item">
+                                            <img src="assets/section-1/scroll-5.avif" class="v-item">
+                                            <img src="assets/section-1/scroll-6.avif" class="v-item">
+                                            <img src="assets/section-1/scroll-7.avif" class="v-item">
+                                            <img src="assets/section-1/scroll-8.avif" class="v-item">
+                                            <img src="assets/section-1/scroll-9.avif" class="v-item">
                                         </div>
                                     </div>
                                     <button id="down" class="btn-nav mt-md-2 chevron-down">&#x2303</button>
@@ -103,23 +103,33 @@
                                                         alt="...">
                                                 </div>
                                             </div>
+                                            <div class="d-flex flex-column align-items-center mt-3">
+                                                
 
-                                            <div class="d-flex justify-content-center align-items-center mt-3">
-                                                <button
-                                                    class="btn btn-outline-dark rounded-circle me-3 mobile-corousal-button"
-                                                    type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
-                                                    <i class="bi bi-chevron-left">&lt;</i>
-                                                </button>
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <button
+                                                        class="btn btn-outline-dark rounded-circle me-3 mobile-corousal-button"
+                                                        type="button" data-bs-target="#customCarousel"
+                                                        data-bs-slide="prev">
+                                                        <i class="bi bi-chevron-left">&lt;</i>
+                                                    </button>
 
-                                                <div id="carousel-counter" class="fw-bold">
-                                                    1 out of 9
+                                                    <div id="carousel-counter" class="fw-bold">
+                                                        1 out of 9
+                                                    </div>
+
+                                                    <button
+                                                        class="btn btn-outline-dark rounded-circle ms-3 mobile-corousal-button"
+                                                        type="button" data-bs-target="#customCarousel"
+                                                        data-bs-slide="next">
+                                                        <i class="bi bi-chevron-right">&gt;</i>
+                                                    </button>
                                                 </div>
-
-                                                <button
-                                                    class="btn btn-outline-dark rounded-circle ms-3 mobile-corousal-button"
-                                                    type="button" data-bs-target="#customCarousel" data-bs-slide="next">
-                                                    <i class="bi bi-chevron-right">&gt;</i>
-                                                </button>
+                                                <div class="progress mb-2 mt-3 section-1-mobile-carousal-progress">
+                                                    <div id="carousel-progress-bar" class="progress-bar section-1-mobile-carousal-progress-inner"
+                                                        role="progressbar">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -964,7 +974,8 @@
                                 <div class="carousel-inner" id="mobile-carousel-inner">
                                 </div>
 
-                                <div class="d-flex justify-content-center align-items-center gap-4 mt-4 section-3-carousal-nav mb-3">
+                                <div
+                                    class="d-flex justify-content-center align-items-center gap-4 mt-4 section-3-carousal-nav mb-3">
                                     <button class="nav-btn" data-bs-target="#mobileReviewCarousel"
                                         data-bs-slide="prev">&lt;</button>
                                     <div class="d-flex gap-5" id="carousel-dots">
