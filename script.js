@@ -140,3 +140,26 @@ myCarousel.addEventListener('slid.bs.carousel', function (event) {
   const currentIndex = event.to + 1;
   counter.innerText = `${currentIndex} out of ${totalItems}`;
 });
+//section 3 crousal mobile
+document.addEventListener("DOMContentLoaded", function() {
+    const desktopGrid = document.getElementById('desktop-grid');
+    const mobileInner = document.getElementById('mobile-carousel-inner');
+    const cards = desktopGrid.querySelectorAll('.col');
+    const dots = document.querySelectorAll('.dot');
+    
+    // Clone cards
+    cards.forEach((col, index) => {
+        const item = document.createElement('div');
+        item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+        item.appendChild(col.cloneNode(true));
+        mobileInner.appendChild(item);
+    });
+
+    // Update Dots
+    const mobileCarousel = document.getElementById('mobileReviewCarousel');
+    mobileCarousel.addEventListener('slid.bs.carousel', function (event) {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === event.to);
+        });
+    });
+});

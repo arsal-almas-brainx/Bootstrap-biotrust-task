@@ -556,6 +556,44 @@ span.left-rating::before {
     color: white !important;
     border: none !important;
 }
+
+.nav-btn {
+  background-color: #17803D; 
+  color: white;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+.nav-btn:hover { background-color: #166534; }
+.dot {
+  width: 7px;
+  height: 7px;
+  background-color: #d1d5db; 
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+.dot.active {
+  background-color: #1f2937; 
+}
+.carousel-inner {
+    display: flex;
+    align-items: stretch;
+}
+.carousel-item {
+    height: 100%;
+}
+.carousel-item .card {
+    height: 100% !important;
+}
+.section-3-carousal-nav{
+    margin-left: -1.9rem;
+}
 /*ids*/
 #content-onetime .my-cards {
     height: 17.5rem;
@@ -700,11 +738,38 @@ span.left-rating::before {
     .section-2-left-image{
         max-width: 430px;
     }
+    .my-custom-avatar{
+        width: 8rem;
+        height: 8rem;
+    }
+    .section-3-card-footer-text{
+        text-align: center;
+        padding-top: 1.25rem;
+    }
+    .section-3-card-button{
+        margin-bottom: 0.5rem;
+    }
+    .section-3-head{
+        text-align: center;
+    }
 }
 
 @media (max-width: 767.98px) {
     .big-row{
         height: auto;
+    }
+    .section-3-head{
+        text-align: center;
+        font-size: 1.875rem;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+    .my-custom-avatar{
+        width: 16rem;
+        height: 16rem;
+    }
+    .star-rating{
+        font-size: 0.72rem;
     }
 }
 
