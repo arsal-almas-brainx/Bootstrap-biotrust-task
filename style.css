@@ -733,7 +733,7 @@ span.left-rating::before {
         font-size: 1.1rem;
     }
     .section-2 div h1{
-        font-size: 2.7rem;
+        font-size: 2.25rem;
     }
     .section-2-left-image{
         max-width: 430px;
@@ -751,6 +751,21 @@ span.left-rating::before {
     }
     .section-3-head{
         text-align: center;
+    }
+    .ratio.ratio-16x9{
+        width: 20rem;
+    }
+    .section-4 .section-4-container{
+        width: 96%;
+    }
+    .section-4 .section-4-button{
+        width: 68%;
+    }
+    .section-4-heading{
+        font-size: 1.8rem;
+    }
+    .me-4-5 {
+        margin-right: 1.7rem !important;
     }
 }
 
@@ -770,6 +785,22 @@ span.left-rating::before {
     }
     .star-rating{
         font-size: 0.72rem;
+    }
+    .ratio.ratio-16x9{
+        margin-top: -3rem;
+        height: 320px;
+        border-radius: 40px;
+    }
+    .section-4-heading{
+        font-size: 1.45rem;
+    }
+    .section-4-right{
+        margin-top: -4rem !important;
+        width: 80% !important;
+        margin-left: 2rem;
+    }
+    .section-4 .section-4-text-simple{
+        font-size: 1.125rem;
     }
 }
 
@@ -806,6 +837,24 @@ span.left-rating::before {
     }
     .row.section-1-switch-buttons{
         width: auto;
+    }
+    .ratio.ratio-16x9{
+        width: 30rem;
+    }
+    .section-4 .section-4-container{
+        width: 96%;
+    }
+    .section-4 .section-4-button{
+        width: 68%;
+    }
+    .section-4-heading{
+        font-size: 1.8rem;
+    }
+    .me-4-5 {
+        margin-right: 1.7rem !important;
+    }
+    .extra-span{
+        display: none;
     }
 }
 }
