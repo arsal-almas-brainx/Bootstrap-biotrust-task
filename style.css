@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
-
 @property --my-green {
     syntax: '<color>';
     inherits: true;
@@ -17,12 +15,7 @@
     inherits: true;
     initial-value: #0e5226;
 }
-
 /*Elements*/
-body {
-    font-family: 'System-UI', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 :root {
     --img-size: 100px;
     --gap: 10px;
@@ -96,8 +89,8 @@ span.left-rating::before {
     opacity: 0.8;
 }
 
-.v-item.active-thumb {
-    border-color: var(--my-blue) !important;
+.v-track .v-item.active-thumb {
+    border-color: var(--my-blue);
     opacity: 1;
 }
 
@@ -149,9 +142,9 @@ span.left-rating::before {
     cursor: pointer;
     font-size: 19px;
 }
-.section-1-mobile-carousal-progress{
+#customCarousel .section-1-mobile-carousal-progress{
     width: 250px; 
-    height: 5px !important; 
+    height: 5px; 
 }
 .section-1-mobile-carousal-progress-inner{
     width: 11.11%; 
@@ -183,8 +176,8 @@ span.left-rating::before {
 }
 
 .row>* {
-    padding-right: calc(var(--bs-gutter-x) * .3) !important;
-    padding-left: calc(var(--bs-gutter-x) * .3) !important;
+    padding-right: calc(var(--bs-gutter-x) * .3);
+    padding-left: calc(var(--bs-gutter-x) * .3);
 }
 
 .btn-check:checked+label.btn.section-1-class-button {
@@ -468,7 +461,7 @@ span.left-rating::before {
     width: auto;
     height: 1.5rem;
     margin-bottom: 2rem;
-    padding: 10px !important;
+    padding: 10px;
 }
 
 .section-3-card-button span {
@@ -507,7 +500,7 @@ span.left-rating::before {
 }
 
 .me-4-5 {
-    margin-right: 2.7rem !important;
+    margin-right: 2.7rem;
 }
 
 .section-4-text-bold {
@@ -529,13 +522,13 @@ span.left-rating::before {
 }
 
 .section-4 .section-4-button:hover {
-    background-color: #156534 !important;
-    color: #FFFFFF !important;
+    background-color: #156534;
+    color: #FFFFFF;
 }
 
 .section-4 .section-4-button:active {
-    background-color: #156534 !important;
-    color: #FFFFFF !important;
+    background-color: #156534;
+    color: #FFFFFF;
 }
 .section-1-ipad-mobile{
     height: 105px;
@@ -560,9 +553,9 @@ span.left-rating::before {
   text-align: center;
 }
 .mobile-corousal-button{
-    background-color: var(--my-green) !important;
-    color: white !important;
-    border: none !important;
+    background-color: var(--my-green);
+    color: white;
+    border: none;
 }
 
 .nav-btn {
@@ -597,11 +590,20 @@ span.left-rating::before {
     height: 100%;
 }
 .carousel-item .card {
-    height: 100% !important;
+    height: 100%;
 }
 .section-3-carousal-nav{
     margin-left: -1.9rem;
 }
+.swipe-to-view-more{
+    color: rgb(113, 119, 133);
+    font-size: 0.95rem;
+}
+.custom-toggle-container {
+    max-width: 1260px; 
+    margin-right: auto;
+    margin-left: auto;
+  }
 /*ids*/
 #content-onetime .my-cards {
     height: 17.5rem;
@@ -620,8 +622,9 @@ span.left-rating::before {
     transform-origin: center center;
 }
 
+
 /*Responsiveness*/
-@media (max-width: 991.98px) {
+@media (max-width: 980px) {
     .my-h4 {
         font-size: 1.1rem;
         display: flex;
@@ -661,7 +664,7 @@ span.left-rating::before {
 
     .section-1-head-caption {
         font-size: 13px;
-        margin-top: -8px !important;
+        margin-top: -8px;
     }
 
     .label.btn.section-1-class-button {
@@ -679,7 +682,7 @@ span.left-rating::before {
 
     .my-small-cards {
         border: 3px solid var(--my-blue);
-        margin-left: 10px !important;
+        margin-left: 10px;
         margin-top: 0.1rem;
     }
 
@@ -753,6 +756,7 @@ span.left-rating::before {
     .section-3-card-footer-text{
         text-align: center;
         padding-top: 1.25rem;
+        font-size: 0.8rem;
     }
     .section-3-card-button{
         margin-bottom: 0.5rem;
@@ -761,10 +765,11 @@ span.left-rating::before {
         text-align: center;
     }
     .ratio.ratio-16x9{
-        width: 20rem;
+        width: 21rem;
     }
     .section-4 .section-4-container{
         width: 96%;
+        max-width: 758px;
     }
     .section-4 .section-4-button{
         width: 68%;
@@ -773,35 +778,40 @@ span.left-rating::before {
         font-size: 1.8rem;
     }
     .me-4-5 {
-        margin-right: 1.7rem !important;
+        margin-right: 1.7rem;
     }
     .section-2-ipad-text{
-        width: 256px !important;
+        width: 256px;
     }
     .hover-circle{
         left: -11px;
         border: 0.07rem solid #fcfcfc;
     }
     .section-2-left-image-ipad{
-        margin-top: 5.5rem !important;
+        margin-top: 5.5rem;
     }
     .hexagon-wrapper{
-        width: 75% !important;
+        width: 75%;
     }
     .section-2-ipad-header{
-        margin-left: 10px !important;
+        margin-left: 10px;
     }
+    .custom-check-badge{
+        width: 30px;
+        height: 21px;
+    }
+    .custom-toggle-container {
+        max-width: 100%;
+  }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
     .big-row{
         height: auto;
     }
     .section-3-head{
         text-align: center;
         font-size: 1.875rem;
-        padding-left: 25px !important;
-        padding-right: 25px !important;
     }
     .my-custom-avatar{
         width: 22.5rem;
@@ -820,8 +830,8 @@ span.left-rating::before {
         font-size: 1.5rem;
     }
     .section-4-right{
-        margin-top: -4rem !important;
-        width: 80% !important;
+        margin-top: -4rem;
+        width: 80% ;
         margin-left: 2rem;
     }
     .section-4 .section-4-text-simple{
@@ -844,7 +854,8 @@ span.left-rating::before {
         height: 120px;
     }
     .hexagon-svg{
-        top: 44%;
+        top: 40%;
+        width: 110%;
     }
     .hover-circle{
         width: 60px;
@@ -859,7 +870,7 @@ span.left-rating::before {
         margin-left: 0rem;
     }
     .section-4-mobile{
-        width: 96.5% !important;
+        width: 96.5%;
     }
     .section-4 .section-4-container{
         width: 99%;
@@ -867,11 +878,24 @@ span.left-rating::before {
     .section-4 .section-4-button{
         width: 55%;
     }
+    .custom-toggle-container {
+       max-width: 540px;
+       margin-right: auto;
+       margin-left: auto;
+    }
+    .section-2-left-image-ipad{
+       margin-top: 2rem;
+    }
+    .section-2-ipad-text{
+       width: 75%;
+    }
+    .section-2-right-head{
+        font-size: 1rem;
+    }
 }
-
 @media (max-width: 575.98px) {
     .section-2 div h1{
-        font-size: 1.8rem;
+        font-size: 1.875rem;
         text-align: center;
     }
     .section-2 div p.text-light{
@@ -879,24 +903,23 @@ span.left-rating::before {
         text-align: center;
     }
     .section-2-left-image{
-        max-width: 360px;
+        max-width: 332px;
         padding-bottom: 4rem;
     }
     .section-2-right{
-        padding-left: 2.5rem !important;
+        padding-left: 2.5rem;
     }
-
 }
 @media (min-width: 430px) and (max-width: 575px){
     .section-1-class-button-left{
         height: 67px;
-        padding-top: 18px !important;
+        padding-top: 18px;
     }
 }
 @media (min-width: 782px){
     .section-1-class-button-left{
-        padding-left: 40px !important;
-        padding-right: 40px !important;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 @media (min-width:992px) and (max-width:1371px){
     #content-onetime .my-cards{
@@ -922,7 +945,7 @@ span.left-rating::before {
         font-size: 1.8rem;
     }
     .me-4-5 {
-        margin-right: 1.7rem !important;
+        margin-right: 1.7rem;
     }
     .extra-span{
         display: none;
