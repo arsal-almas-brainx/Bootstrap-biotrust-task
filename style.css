@@ -16,6 +16,9 @@
     initial-value: #0e5226;
 }
 /*Elements*/
+body{
+    overflow-x: hidden
+}
 :root {
     --img-size: 100px;
     --gap: 10px;
@@ -240,16 +243,16 @@ span.left-rating::before {
 }
 
 .col-3.my-cards.mt-4 {
-    width: 14rem;
+    width: 32%;
 }
 
 .row.section-1-switch-buttons {
-    width: 44.2rem;
+    width: auto;
 }
 
 .row .my-switch-button {
     background-color: var(--my-green);
-    width: 11.3rem;
+    width: 75.5%;
     color: white;
     font-size: 0.8rem;
     font-weight: 700;
@@ -757,6 +760,8 @@ span.left-rating::before {
         text-align: center;
         padding-top: 1.25rem;
         font-size: 0.8rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     .section-3-card-button{
         margin-bottom: 0.5rem;
@@ -765,11 +770,11 @@ span.left-rating::before {
         text-align: center;
     }
     .ratio.ratio-16x9{
-        width: 21rem;
+        width: auto;
     }
     .section-4 .section-4-container{
-        width: 96%;
-        max-width: 758px;
+        width: 100%;
+        max-width: 790px;
     }
     .section-4 .section-4-button{
         width: 68%;
@@ -778,7 +783,7 @@ span.left-rating::before {
         font-size: 1.8rem;
     }
     .me-4-5 {
-        margin-right: 1.7rem;
+        margin-right: 3rem;
     }
     .section-2-ipad-text{
         width: 256px;
@@ -803,6 +808,16 @@ span.left-rating::before {
     .custom-toggle-container {
         max-width: 100%;
   }
+  .ipad-check-circle{
+    padding-top: 1.25rem;
+  }
+  .section-1-class-button-left{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .section-3-ipad-text{
+        height: 183px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -892,8 +907,7 @@ span.left-rating::before {
     .section-2-right-head{
         font-size: 1rem;
     }
-}
-@media (max-width: 575.98px) {
+    /*from next*/
     .section-2 div h1{
         font-size: 1.875rem;
         text-align: center;
@@ -915,40 +929,4 @@ span.left-rating::before {
         height: 67px;
         padding-top: 18px;
     }
-}
-@media (min-width: 782px){
-    .section-1-class-button-left{
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-@media (min-width:992px) and (max-width:1371px){
-    #content-onetime .my-cards{
-        width: 166px;
-    }
-    .row .my-switch-button{
-        width: 7.3rem;
-        font-size: 0.65rem;
-    }
-    .row.section-1-switch-buttons{
-        width: auto;
-    }
-    .ratio.ratio-16x9{
-        width: 30rem;
-    }
-    .section-4 .section-4-container{
-        width: 96%;
-    }
-    .section-4 .section-4-button{
-        width: 68%;
-    }
-    .section-4-heading{
-        font-size: 1.8rem;
-    }
-    .me-4-5 {
-        margin-right: 1.7rem;
-    }
-    .extra-span{
-        display: none;
-    }
-}
 }
