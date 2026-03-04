@@ -923,4 +923,21 @@ span.left-rating::before {
     .section-2-right{
         padding-left: 2.5rem;
     }
+    .section-3-ipad-text{
+        height: auto;
+    }
+    .ipad-check-circle{
+        padding-top: 0;
+    }
+    .custom-check-badge{
+        width: 18px;
+        height: 18px;
+    }
+    .custom-check-badge-text{
+        font-size: 0.75rem;
+        line-height: 18px;
+    }
+    .section-3-card-footer{
+        height: 100px;
+    }
 }

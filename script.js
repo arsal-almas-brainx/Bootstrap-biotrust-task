@@ -138,7 +138,7 @@ const totalItems = document.querySelectorAll('#customCarousel .carousel-item').l
 
 myCarousel.addEventListener('slide.bs.carousel', function (event) {
     const currentIndex = event.to + 1;
-    counter.innerText = `${currentIndex} out of ${totalItems}`;
+    counter.innerText = `${currentIndex} of ${totalItems}`;
     const progressPercent = (currentIndex / totalItems) * 100;
     progressBar.style.width = progressPercent + "%";
 });
