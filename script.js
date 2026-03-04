@@ -56,35 +56,57 @@ function switchContent(type) {
     let scrollLeft;
     const items = [...hTrack.children];
     const originalCount = items.length;
+
     items.forEach(item => {
         hTrack.appendChild(item.cloneNode(true));
         hTrack.insertBefore(item.cloneNode(true), hTrack.firstChild);
     });
+
     const setInitialPos = () => {
         const itemWidth = hTrack.children[0].offsetWidth;
         hViewport.scrollLeft = itemWidth * originalCount;
     };
+
     window.addEventListener('load', setInitialPos);
     window.addEventListener('resize', setInitialPos);
-    hViewport.addEventListener('mousedown', (e) => {
+
+    const getPos = (e) => {
+        return e.touches ? e.touches[0].pageX : e.pageX;
+    };
+
+    const startAction = (e) => {
         isDown = true;
         hViewport.style.cursor = 'grabbing';
-        startX = e.pageX - hViewport.offsetLeft;
+        startX = getPos(e) - hViewport.offsetLeft;
         scrollLeft = hViewport.scrollLeft;
-    });
-    window.addEventListener('mouseup', () => {
+    };
+
+    const endAction = () => {
         isDown = false;
         hViewport.style.cursor = 'grab';
-    });
-    hViewport.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - hViewport.offsetLeft;
-        const walk = (x - startX) * 1.5; // Drag speed multiplier
-        hViewport.scrollLeft = scrollLeft - walk;
+    };
 
+    const moveAction = (e) => {
+        if (!isDown) return;
+        
+        if (e.type === 'touchmove') e.preventDefault(); 
+        
+        const x = getPos(e) - hViewport.offsetLeft;
+        const walk = (x - startX) * 1.5; 
+        hViewport.scrollLeft = scrollLeft - walk;
         handleLoop();
-    });
+    };
+
+    // Mouse Listeners
+    hViewport.addEventListener('mousedown', startAction);
+    window.addEventListener('mouseup', endAction);
+    hViewport.addEventListener('mousemove', moveAction);
+
+    // Touch Listeners (iPad/Mobile)
+    hViewport.addEventListener('touchstart', startAction, { passive: false });
+    window.addEventListener('touchend', endAction);
+    hViewport.addEventListener('touchmove', moveAction, { passive: false });
+
     function handleLoop() {
         const itemWidth = hTrack.children[0].offsetWidth;
         const totalSetWidth = itemWidth * originalCount;
