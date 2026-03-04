@@ -924,9 +924,3 @@ span.left-rating::before {
         padding-left: 2.5rem;
     }
 }
-@media (min-width: 430px) and (max-width: 575px){
-    .section-1-class-button-left{
-        height: 67px;
-        padding-top: 18px;
-    }
-}
